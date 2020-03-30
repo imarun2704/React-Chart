@@ -137,35 +137,38 @@ class Chart extends React.Component {
 
 
   render() {
-    
+    const height = '300px'
     return (
       <div className="App">
         <button onClick={this.fetch} >click to get data</button>
-        
+             <div className="col-md-4" style={{minHeight:height}}> 
                 {this.state.data.labels && (
                 <Bar
                     data={ this.state.data}
-                    width={100}
+                    width={50}
                     height={50}
                 />
                 )}
-            
+                </div>
+
+                <div className="col-md-4"> 
                 {this.state.data2.labels && (
                     <Bar
                         data={ this.state.data2}
-                        width={100}
+                        width={50}
                         height={50}
                     />
                     )}
-       
+                    </div>
+                    <div className="col-md-4"> 
                 {this.state.data3.labels && (
                   <Bar
                     data={this.state.data3}
-                    width={100}
+                    width={50}
                     height={50}
                   />
                 )}
-        
+                </div>
       </div>
     );
   }
